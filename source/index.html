@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html class="page" lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link
+      rel="preload"
+      href="fonts/ubuntu.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin="anonymous"
+    />
+  <link rel="stylesheet" href="css/styles.min.css" />
+  <title>test</title>
+</head>
+
+<body class="page__body">
+  <main>
+    <div class="page__square page__square--1"></div>
+    <div class="page__square page__square--2"></div>
+    <div class="page__square page__square--3"></div>
+    <div class="page__square page__square--4"></div>
+    <div class="page__circle-container">
+      <button class="page__circle" type="button">Нажать</button>
+    </div>
+
+    <section class="auto ">
+      <h1 class="visually-hidden">Выбор автомобиля</h1>
+      <form class="auto__form container" action="https://echo.htmlacademy.ru/" method="post">
+        <fieldset class="auto__fieldset">
+          <label class="auto__label" for="mark">Марка автомобиля</label>
+          <select aria-label="Сортировка по марке авто" class="auto__select" name="mark" id="mark"></select>
+
+          <label class="auto__label" for="model">Модель автомобиля</label>
+          <select aria-label="Сортировка по модели авто" class="auto__select" name="model" id="model"></select>
+
+          <label class="auto__label" for="year">Год выпуска</label>
+          <select aria-label="Сортировка по году выпуска" class="auto__select" name="year" id="year"></select>
+
+          <button class="auto__delivery" type="button">Доставить</button>
+          <input class="auto__date" type="date" id="calendar">
+        </fieldset>
+      </form>
+    </section>
+
+  </main>
+
+  <script src="scripts/main.min.js" type="module"></script>
+</body>
+
+</html>

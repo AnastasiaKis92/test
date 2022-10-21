@@ -1,0 +1,85 @@
+@keyframes square-1
+    to
+        top: -100%
+        left: -100%
+@keyframes square-2
+    to
+        top: -100%
+        left: 200%
+
+@keyframes square-3
+    to
+        bottom: -100%
+        left: -100%
+
+@keyframes square-4
+    to
+        bottom: -100%
+        left: 200%
+
+@keyframes circle
+    to
+        opacity: 1
+
+@keyframes rotate
+    to
+        transform: rotate(0deg)
+
+.page
+    height: 100%
+
+.page__body
+    display: flex
+    align-items: center
+    justify-content: center
+    position: relative
+    min-width: 320px
+    height: 100%
+    font-family: "ubuntu", "Arial", sans-serif
+    +font(1rem, calc(20 / 16))
+    overflow: hidden
+
+.page__square
+    position: absolute
+    transform: translate(-50%, -50%)
+    width: 125px
+    height: 125px
+    background-color: $square
+    animation-duration: 5s
+    animation-timing-function: ease-in-out
+    animation-fill-mode: forwards
+    &--1
+        top: calc( 50% - 62px)
+        left: calc( 50% -  62px)
+        animation-name: square-1
+    &--2
+        top: calc( 50% - 62px)
+        left: calc( 50% + 62px)
+        animation-name: square-2
+    &--3
+        bottom: calc( 50% - 187px)
+        left: calc( 50% -  62px)
+        animation-name: square-3
+    &--4
+        bottom: calc( 50% - 187px)
+        left: calc( 50% + 62px)
+        animation-name: square-4
+
+.page__circle-container
+    width: 100%
+    display: flex
+    align-items: center
+    justify-content: center
+
+.page__circle
+    +reset-btn
+    +ubuntu
+    +font(1rem, calc(20/16))
+    color: $black
+    opacity: 0
+    width: 100px
+    height: 100px
+    background-color: $circle
+    border-radius: 50%
+    transform: rotate(180deg)
+    animation: 0.7s 2s forwards circle ease-in-out, 2s 2.5s forwards rotate ease-in-out

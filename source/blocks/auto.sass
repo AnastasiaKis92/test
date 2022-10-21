@@ -1,0 +1,58 @@
+.auto__form
+    +align-center
+    width: 100%
+    opacity: 0
+    pointer-events: none
+    background-color: $white
+
+.auto__fieldset
+    display: flex
+    flex-direction: column
+    margin-top: 2rem
+    padding: 1rem
+    border: 1px solid $square
+    border-radius: 10px
+
+.auto__label
+    margin-top: 0.5rem
+    margin-bottom: 0.5rem
+    &:first-of-type
+        margin-top: 0
+
+.auto__select
+    width: 50%
+    padding: 0.2rem
+    +ubuntu
+
+.auto__delivery
+    +reset-btn
+    +ubuntu
+    +font(1rem, calc(20/16))
+    color: $black
+    align-self: center
+    margin-top: 1rem
+    margin-bottom: 1rem
+    padding: 0.6rem
+    background-color: $square
+    border-radius: 6px
+    opacity: 0
+    pointer-events: none
+    transition: opacity 0.5s ease
+
+.auto__date
+    opacity: 0
+    pointer-events: none
+    transition: opacity 0.5s ease
+    
+.active
+    opacity: 1
+    pointer-events: auto
+    transition: opacity 0.5s ease
+
+@media (min-width: $tablet-width)
+    .auto__form
+        display: flex
+        justify-content: center
+
+    .auto__fieldset
+        width: 50%
