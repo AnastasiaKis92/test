@@ -1,5 +1,6 @@
 .auto__form
-    +align-center
+    position: absolute
+    top: 0
     width: 100%
     opacity: 0
     pointer-events: none
@@ -8,7 +9,7 @@
 .auto__fieldset
     display: flex
     flex-direction: column
-    margin-top: 2rem
+    margin: 0
     padding: 1rem
     border: 1px solid $square
     border-radius: 10px
@@ -20,11 +21,16 @@
         margin-top: 0
 
 .auto__select
-    width: 50%
+    width: 190px
     padding: 0.2rem
     +ubuntu
+    +font(1rem, calc(20/16))
+    color: $black
+    background-color: $white
+    border: 1px solid $square
+    border-radius: 10px
 
-.auto__delivery
+.auto__button
     +reset-btn
     +ubuntu
     +font(1rem, calc(20/16))
@@ -40,19 +46,31 @@
     transition: opacity 0.5s ease
 
 .auto__date
-    opacity: 0
-    pointer-events: none
-    transition: opacity 0.5s ease
-    
+    display: none
+
+.auto__text
+    display: none
+    text-align: center
+
+.auto__link
+    transition: color 0.3s
+    &:hover
+        color: $square
+        transition: color 0.1s
+
 .active
     opacity: 1
     pointer-events: auto
     transition: opacity 0.5s ease
 
+.flatpickr-calendar
+    margin: 0 auto
+
 @media (min-width: $tablet-width)
     .auto__form
-        display: flex
-        justify-content: center
+        left: 50%
+        transform: translateX(-50%)
+        width: 50%
 
     .auto__fieldset
-        width: 50%
+        padding: 2rem
